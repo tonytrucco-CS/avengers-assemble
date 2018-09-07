@@ -1,0 +1,47 @@
+h1 {
+  font-family: inherit;
+  font-size: em(36);
+  margin: 0 0 $margin;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: inherit;
+  font-size: em(24);
+  margin: 0 0 $margin;
+  font-weight: 400;
+}
+
+p {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 0 $margin;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  transition: all .3s;
+  &:hover:not(.btn) {
+    cursor: pointer;
+    color: darken($link-color, 10);
+  }
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+label, legend {
+  font-weight: 600;
+  color: transparentize($font-color, .35);
+}
+
+fieldset {
+  label {
+    font-weight: 400;
+    color: $font-color;
+  }
+}

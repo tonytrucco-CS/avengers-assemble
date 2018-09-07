@@ -1,0 +1,118 @@
+*, .filled, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica';
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: $base-font;
+  color: $font-color;
+  background-color: $background-default;
+}
+
+#root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.header {
+  background-color: $header-bg;
+  padding: $padding;
+  display: flex;
+  flex: 1 100%;
+  color: $white;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+  a {
+    padding: 0 $padding;
+    color: $white;
+    &:hover:not(.btn) {
+      color: darken($white, 5);
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  flex: 1 100%;
+  max-width: 1200px;
+  padding: $padding;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  display: block;
+  padding: $padding/2;
+  border-radius: $border-radius;
+  border: solid 1px $border-color;
+  font-size: inherit;
+  margin-bottom: $margin;
+  min-width: 300px;
+  transition: all .3s;
+  &:focus {
+    outline: 0;
+    border-color: $link-color;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0 0 $margin 0;
+  border: none;
+}
+
+.msg {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  text-align: center;
+  padding: $padding;
+  background-color: transparentize($error, .8);
+  color: $error;
+  border: solid 1px $error;
+  border-radius: $border-radius;
+  margin-bottom: $margin;
+}
+
+.btn, button {
+  color: $white;
+  background-color: $link-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  border: none;
+  margin-bottom: $margin;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all .3s;
+  &:hover {
+    cursor: pointer;
+    background-color: darken($link-color, 10);
+  }
+}
+
+.players {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.player-block {
+  width: calc(25% - 10px);
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  padding: $padding;
+  margin: 5px;
+  h3 {
+    margin: 0;
+  }
+  p:first-of-type {
+    margin: 0;
+  }
+}

@@ -1,0 +1,137 @@
+*, .filled, :after, :before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica';
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #353535;
+  background-color: #DEDEDE; }
+
+#root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+.header {
+  background-color: #CC1D22;
+  padding: 15px;
+  display: flex;
+  flex: 1 100%;
+  color: #FFFFFF;
+  justify-content: space-between; }
+  .header p {
+    margin: 0; }
+  .header a {
+    padding: 0 15px;
+    color: #FFFFFF; }
+    .header a:hover:not(.btn) {
+      color: #f2f2f2;
+      text-decoration: underline; }
+
+.content {
+  flex: 1 100%;
+  max-width: 1200px;
+  padding: 15px; }
+
+input[type=text], input[type=password], input[type=email] {
+  display: block;
+  padding: 7.5px;
+  border-radius: 5px;
+  border: solid 1px #ababab;
+  font-size: inherit;
+  margin-bottom: 15px;
+  min-width: 300px;
+  transition: all .3s; }
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    outline: 0;
+    border-color: #547DBB; }
+
+fieldset {
+  padding: 0;
+  margin: 0 0 15px 0;
+  border: none; }
+
+.msg {
+  display: flex;
+  justify-content: center; }
+
+.error {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(133, 0, 0, 0.2);
+  color: #850000;
+  border: solid 1px #850000;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+
+.btn, button {
+  color: #FFFFFF;
+  background-color: #547DBB;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all .3s; }
+  .btn:hover, button:hover {
+    cursor: pointer;
+    background-color: #3f649d; }
+
+.players {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; }
+
+.player-block {
+  width: calc(25% - 10px);
+  border: solid 1px #ababab;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 5px; }
+  .player-block h3 {
+    margin: 0; }
+  .player-block p:first-of-type {
+    margin: 0; }
+
+h1 {
+  font-family: inherit;
+  font-size: 2.25em;
+  margin: 0 0 15px;
+  font-weight: 400; }
+
+h2 {
+  font-family: inherit;
+  font-size: 1.5em;
+  margin: 0 0 15px;
+  font-weight: 400; }
+
+p {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 0 15px;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #547DBB;
+  transition: all .3s; }
+  a:hover:not(.btn) {
+    cursor: pointer;
+    color: #3f649d; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+label, legend {
+  font-weight: 600;
+  color: rgba(53, 53, 53, 0.65); }
+
+fieldset label {
+  font-weight: 400;
+  color: #353535; }
